@@ -6,8 +6,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 32px 16px;
-    background: #7041a6;
-    color: #33283a;
+    background: #ffe5e5;
+    color: #000000;
     font-family: Arial, sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
     margin: 24px auto;
     padding: 28px;
     border-radius: 14px;
-    background: #fff1d6;
+    background: #cd62ff;
     box-shadow: 0 8px 24px rgb(36 15 54 / 25%);
 }
 
@@ -27,7 +27,7 @@ body {
 
 h1 {
     margin-top: 0;
-    color: #563080;
+    color: #000000;
 }
 
 .producto-card {
@@ -35,7 +35,7 @@ h1 {
     padding: 18px;
     border: 1px solid #ddcdb5;
     border-radius: 10px;
-    background: #fffaf0;
+    background: #d183ff;
 }
 
 .producto-card h2 {
@@ -54,7 +54,7 @@ h1 {
 form {
     padding: 20px;
     border-radius: 10px;
-    background: #fffaf0;
+    background: #af9eb9;
 }
 
 form p {
@@ -98,7 +98,7 @@ button {
 }
 
 a {
-    color: #563080;
+    color: #000000;
     font-weight: 600;
 }
 
@@ -108,7 +108,7 @@ button,
     border: 0;
     border-radius: 7px;
     background: #7041a6;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
 }
