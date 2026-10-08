@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="{% static 'asistencias/asistencias.css' %}">
+</head>
+<body>
+    
+    <main class="contenedor">
+    <h1>Lista de asistencias</h1>
+
+    <a class="boton" href="/asistencias/">Crear nueva asistencia</a>
+
+    {% for asistencia in asistencias %}
+        <section class="producto-card">
+            <h2>{{ asistencia.nombres }}</h2>
+            <p>Tipo de documento: {{ asistencia.tipo_documento }}</p>
+            <p>Documento: {{ asistencia.documento }}</p>
+            <p>Asistio: {{ asistencia.asistio }}</p>
+            <a href="/asistencias/detalle/{{ asistencia.id }}/">Ver</a>
+            <a href="/asistencias/editar/{{ asistencia.id }}/">Editar</a>
+            <a href="/asistencias/eliminar/{{ asistencia.id }}/">Eliminar</a>
+        </section>
+    {% empty %}
+        <p>No hay productos.</p>
+    {% endfor %}
+</main>
+
+</body>
+</html>

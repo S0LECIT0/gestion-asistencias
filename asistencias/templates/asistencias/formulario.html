@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="{% static 'asistencias/asistencias.css' %}">
+</head>
+<body>
+
+    <div class="contenedor-formulario">    
+        <h1>Asistencia</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <p>
+                <label>Tipo Documento:
+                    <input type="text" name="tipo_documento" value="{{ asistencia.tipo_documento|default:'' }}" required placeholder="RC, TI, CC">
+                </label>
+            </p>
+
+            <p>
+                <label>Documento:
+                    <input type="text" name="documento" value="{{ asistencia.documento|default:'' }}" required>
+                </label>
+            </p>
+
+            <p>
+                <label>Nombres:
+                    <input type="text" name="nombres" value="{{ asistencia.nombres|default:'' }}" required>
+                </label>
+            </p>
+
+            <p>
+                <label>Apellidos:
+                    <input type="text" name="apellidos" value="{{ asistencia.apellidos|default:'' }}" required>
+                </label>
+            </p>
+
+            <p>
+                <label>Whatsapp:
+                    <input type="text" name="whatsapp" value="{{ asistencia.whatsapp|default:'' }}" required>
+                </label>
+            </p>
+
+            <p>
+                <label>Fecha:
+                    <input type="date" name="fecha" value="{{ asistencia.fecha|default:'' }}" required>
+                </label>
+            </p>
+
+            <p>
+                <label>Asistencia:
+                    <input type="text" name="asistio" value="{{ asistencia.asistio|default:'' }}" required>
+                </label>
+            </p>
+
+            <button type="submit">
+                Guardar
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/asistencias/lista/">
+            Ver asistencias
+        </a>
+    </div>
+
+</body>
+</html>
